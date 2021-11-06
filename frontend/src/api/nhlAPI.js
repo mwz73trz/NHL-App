@@ -27,7 +27,7 @@ const tryCatchFetch = async (url, init) => {
 
 const getLeagues = async () => {
   let url = `${BASE_URL}api/leagues/`;
-  return tryCatchFetch(url, getInit());
+  return await tryCatchFetch(url, getInit());
 };
 
 const myExports = {

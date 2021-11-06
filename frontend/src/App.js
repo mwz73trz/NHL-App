@@ -1,21 +1,13 @@
-import "./App.css";
-import { Component } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+import { Outlet, Link } from "react-router-dom";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Router>
-          <Routes>
-            <Route to="/" element={<App />} />
-            <Route index element={<HomePage />} />
-          </Routes>
-        </Router>
-      </div>
-    );
-  }
+export default function App() {
+  return (
+    <div>
+      <h1>NHL Standings and Player Stat App</h1>
+      <nav style={{ borderBottom: "solid 1px", paddingBottom: "1rem" }}>
+        <Link to="/leagues">Leagues</Link>
+      </nav>
+      <Outlet />
+    </div>
+  );
 }
-
-export default App;
