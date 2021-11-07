@@ -30,8 +30,14 @@ const getLeagues = async () => {
   return await tryCatchFetch(url, getInit());
 };
 
+const getLeagueById = async (leagueId) => {
+  let url = `${BASE_URL}api/leagues/${leagueId}/`;
+  return await tryCatchFetch(url, getInit());
+};
+
 const myExports = {
   getLeagues,
+  getLeagueById,
 };
 
 export default myExports;

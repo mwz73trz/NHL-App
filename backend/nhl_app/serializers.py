@@ -6,6 +6,7 @@ class LeagueSerializer(ModelSerializer):
         model = League
         fields = ['id', 'name', 'conferences', 'divisions', 'teams', 'players']
         depth = 1
+        
 
 class ConferenceSerializer(ModelSerializer):
     class Meta:
