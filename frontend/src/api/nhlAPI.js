@@ -13,7 +13,7 @@ const tryCatchFetch = async (url, init) => {
     let response = await fetch(url, init);
     if (response.ok) {
       if (response.status !== 204) {
-        let data = await response.json();
+        let data = response.json();
         return data;
       } else {
         return { success: true };
